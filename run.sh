@@ -3,6 +3,7 @@
 PHPVERSION=`php -i | head | grep 'Version' | cut -d ' ' -f 4-10`
 
 echo $PHPVERSION
+php ./bin/build_requires.php
 
 echo "REQUIRE"
 php test_require.php
