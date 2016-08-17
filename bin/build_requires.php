@@ -18,5 +18,9 @@ while( $i < 10000 ) {
 		$putpoint = dirname( __file__ ) . '/../requires/' . sprintf( $file_name, $i );
 		file_put_contents( $putpoint, $str );
 	}
-$i++;
+	echo ".";
+	$i++;
+	if ( $i % 50 === 0 ){
+		echo " [" . $i . ' /10000]' . PHP_EOL;
+	}
 }
